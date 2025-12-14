@@ -2,6 +2,7 @@ package dev.droca.desafio_criptografia.service;
 
 import org.springframework.stereotype.Service;
 
+import dev.droca.desafio_criptografia.dto.UserGetResponseDTO;
 import dev.droca.desafio_criptografia.dto.UserRequestDTO;
 import dev.droca.desafio_criptografia.dto.UserResponseDTO;
 import dev.droca.desafio_criptografia.entity.UserEntity;
@@ -19,9 +20,13 @@ public class UserService {
     public UserResponseDTO createUser(UserRequestDTO userRequest) {
 
         UserEntity userEntity = new UserEntity(userRequest.userDocument(), userRequest.creditCardToken(), userRequest.value());
-        userRepository.save(userEntity);
+        UserEntity userSaved = userRepository.save(userEntity);
         
-        return new UserResponseDTO();
+        return new UserResponseDTO(userSaved.getId(), userSaved.getUserDocument(), userSaved.getCreditCardToken(), userSaved.getValue());
     }
     
+    public UserGetResponseDTO getUser(Long userId) {
+        UserEntity userDatabase = userRepository.findById(userId).orElseThrow(() -> new RuntimeException());
+        return new UserGetResponseDTO(userDatabase.getId(), userDatabase.getUserDocument(), userDatabase.getCreditCardToken(), userDatabase.getValue());
+    }
 }

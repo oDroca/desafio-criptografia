@@ -33,4 +33,4 @@ build/
 .vscode/
 
 # Chave assimétrica privada
-app.key
+.env
