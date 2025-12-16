@@ -1,4 +1,13 @@
-# <div align="center"> Desafio Criptografia por [Backend Brasil](https://github.com/backend-br/desafios/blob/master/cryptography/PROBLEM.md) </div>
+<div id='user-content-toc'>
+   <ul align="center" style='list-style: none;'>
+      <summary>
+         <h1> Desafio Criptografia por <a href="https://github.com/backend-br/desafios/blob/master/cryptography/PROBLEM.md"> Backend Brasil </a>
+         </h1>
+      </summary>
+   </ul>
+</div>
+
+---
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oDroca/icones-para-readme/main/assets/stack-white.svg" height="40">
@@ -38,13 +47,7 @@
 
 ---
 
-<div id="user-content-toc">
-    <ul style="list-style: none;">
-        <summary ">
-            <h2>Desafio</h2>
-        </summary>
-    </ul>
-</div>
+<h2>Desafio</h2>
 
 Implementar criptografia de forma transparente. O objetivo é garantir que os campos sensíveis dos objetos de entidade não sejam visíveis diretamente, realizando a criptografia em tempo de execução durante a conversão da entidade para a coluna correspondente no banco de dados, e vice-versa.
 
@@ -58,13 +61,7 @@ Exemplo de tabela no banco de dados considerando que os atributos `userDocument`
 
 ---
 
-<div id="user-content-toc">
-    <ul style="list-style: none;">
-        <summary ">
-            <h2>Solução</h2>
-        </summary>
-    </ul>
-</div>
+<h2>Solução</h2>
 
 Para concluir o desafio eu tive que implementar principalmente o **Attribute Converter** do JPA, essa interface é chamada quando se vai persistir ou recuperar dados. Ela tem dois métodos, onde `convertToDatabaseColumn` é chamado quando for persistir, esse método irá criptografar os dados e enviá-los para o JPA persistir. Já o `convertToEntityAttribute` é chamado durante a leitura, ele irá recuperar os dados criptografados, descriptografá-los e retornar para a API.
 
