@@ -55,9 +55,11 @@ Exemplo de tabela no banco de dados considerando que os atributos `userDocument`
 </table>
 
 <div id="user-content-toc">
-    <summary style="list-style: none;">
-      <h2>Solução</h2>
-    </summary>
+    <ul style="list-style: none;">
+        <summary ">
+            <h2>Solução</h2>
+        </summary>
+    </ul>
 </div>
 
 Para concluir o desafio eu tive que implementar principalmente o **Attribute Converter** do JPA, essa interface é chamada quando se vai persistir ou recuperar dados. Ela tem dois métodos, onde `convertToDatabaseColumn` é chamado quando for persistir, esse método irá criptografar os dados e enviá-los para o JPA persistir. Já o `convertToEntityAttribute` é chamado durante a leitura, ele irá recuperar os dados criptografados, descriptografá-los e retornar para a API.
