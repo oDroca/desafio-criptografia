@@ -36,6 +36,8 @@
     </tr>
 </table>
 
+---
+
 <div id="user-content-toc">
     <ul style="list-style: none;">
         <summary ">
@@ -53,6 +55,8 @@ Exemplo de tabela no banco de dados considerando que os atributos `userDocument`
     <tr><td>2</td> <td>MzI5NDU0MTA1ODM=</td> <td>eHl6NDU2</td> <td>1000</td> </tr>
     <tr><td>3</td> <td>NzYwNzc0NTIzODY=</td> <td>Nzg5eHB0bw==</td> <td>1500</td> </tr>
 </table>
+
+---
 
 <div id="user-content-toc">
     <ul style="list-style: none;">
