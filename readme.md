@@ -37,10 +37,10 @@
 </table>
 
 <div id="user-content-toc">
-    <ul style="list-style: none;>
-    <summary ">
-      <h2>Desafio</h2>
-    </summary>
+    <ul style="list-style: none;">
+        <summary ">
+            <h2>Desafio</h2>
+        </summary>
     </ul>
 </div>
 
