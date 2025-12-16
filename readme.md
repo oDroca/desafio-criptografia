@@ -37,9 +37,11 @@
 </table>
 
 <div id="user-content-toc">
-    <summary style="list-style: none;">
+    <ul style="list-style: none;>
+    <summary ">
       <h2>Desafio</h2>
     </summary>
+    </ul>
 </div>
 
 Implementar criptografia de forma transparente. O objetivo é garantir que os campos sensíveis dos objetos de entidade não sejam visíveis diretamente, realizando a criptografia em tempo de execução durante a conversão da entidade para a coluna correspondente no banco de dados, e vice-versa.
